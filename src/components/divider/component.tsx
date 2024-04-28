@@ -1,13 +1,9 @@
-import React, { FC } from 'react';
-import { ViewProps } from 'react-native';
-import { Typography } from '../typography';
 import styled from '@emotion/native';
-import { spacing } from '../../theme/spacing';
+import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
-
-export type DividerProps = ViewProps & {
-  children?: string;
-};
+import { spacing } from '../../theme/spacing';
+import { Typography } from '../typography';
+import { DividerProps } from './types';
 
 export const Divider: FC<DividerProps> = ({ children }) => {
   return (

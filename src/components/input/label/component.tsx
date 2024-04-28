@@ -1,11 +1,8 @@
-import { Typography, TypographyProps } from '../../typography';
 import styled from '@emotion/native';
 import { colors } from '../../../theme/colors';
 import { spacing } from '../../../theme/spacing';
-
-export type InputLabelProps = TypographyProps & {
-  isError?: boolean;
-};
+import { Typography } from '../../typography';
+import { InputLabelProps } from './types';
 
 export const InputLabel = styled(Typography)<InputLabelProps>`
   margin-left: ${spacing[5]};

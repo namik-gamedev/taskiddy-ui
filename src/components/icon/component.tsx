@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import React, { ComponentProps, FC } from 'react';
+import React, { FC } from 'react';
 import { View } from 'react-native';
-
-export type IconProps = ComponentProps<typeof FontAwesomeIcon>;
+import { IconProps } from './types';
 
 export const Icon: FC<IconProps> = ({ color = 'black', size, ...props }) => {
   return (

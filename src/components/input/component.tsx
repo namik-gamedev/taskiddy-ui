@@ -1,20 +1,11 @@
 import styled from '@emotion/native';
 import React, { FC } from 'react';
-import { TextInputProps } from 'react-native';
 import { colors } from '../../theme/colors';
 import { spacing } from '../../theme/spacing';
 import { borderRadii } from '../../theme/border-radii';
-import { AdornmentProps } from './types';
+import { InputProps } from './types';
 import { InputHelperText } from './helper-text';
 import { InputLabel } from './label';
-
-export type InputProps = TextInputProps & {
-  label?: string;
-  LeftAdornment?: FC<AdornmentProps>;
-  RightAdornment?: FC<AdornmentProps>;
-  helperText?: string;
-  isError?: boolean;
-};
 
 export const Input: FC<InputProps> = ({
   label,
@@ -78,6 +69,3 @@ const StyledInput = styled.TextInput<InputProps>`
 
   ${({ isError }) => ({ color: isError ? colors.danger : 'black' })}
 `;
-
-export * from './helper-text';
-export * from './label';
