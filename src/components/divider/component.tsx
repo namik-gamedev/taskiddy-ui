@@ -1,7 +1,6 @@
 import styled from '@emotion/native';
 import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
-import { spacing } from '../../theme/spacing';
 import { Typography } from '../typography';
 import { DividerProps } from './types';
 
@@ -18,7 +17,7 @@ export const Divider: FC<DividerProps> = ({ children }) => {
 const Container = styled.View`
   flex-direction: row;
   align-items: center;
-  padding: ${spacing[1]} 0;
+  padding: 4px 0;
 `;
 
 const Line = styled.View`
@@ -28,6 +27,6 @@ const Line = styled.View`
 `;
 
 const Text = styled(Typography)`
-  margin: 0 ${spacing[3]}px;
+  margin: 0 12px;
   color: ${colors.textLight};
 `;

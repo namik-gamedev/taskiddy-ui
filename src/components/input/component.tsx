@@ -1,8 +1,6 @@
 import styled from '@emotion/native';
 import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
-import { spacing } from '../../theme/spacing';
-import { borderRadii } from '../../theme/border-radii';
 import { InputProps } from './types';
 import { InputHelperText } from './helper-text';
 import { InputLabel } from './label';
@@ -45,16 +43,16 @@ export const Input: FC<InputProps> = ({
 };
 
 const Container = styled.View`
-  row-gap: ${spacing[1]}px;
+  row-gap: 4px;
 `;
 
 const InputContainer = styled.View`
   background-color: ${colors.textLighter};
-  border-radius: ${borderRadii.lg}px;
+  border-radius: 20px;
   flex-direction: row;
-  height: ${spacing[12]}px;
-  padding: 0 ${spacing[5]}px;
-  column-gap: ${spacing[3]}px;
+  height: 48px;
+  padding: 0 20px;
+  column-gap: 12px;
 `;
 
 const AdornmentContainer = styled.View`
