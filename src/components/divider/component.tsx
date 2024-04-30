@@ -22,12 +22,12 @@ const Container = styled.View`
 `;
 
 const Line = styled.View`
-  height: 0.5;
+  height: 0.5px;
   flex: 1;
   background-color: ${colors.textLight};
 `;
 
 const Text = styled(Typography)`
-  margin: 0 ${spacing[3]};
+  margin: 0 ${spacing[3]}px;
   color: ${colors.textLight};
 `;

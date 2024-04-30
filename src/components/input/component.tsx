@@ -45,16 +45,16 @@ export const Input: FC<InputProps> = ({
 };
 
 const Container = styled.View`
-  row-gap: ${spacing[1]};
+  row-gap: ${spacing[1]}px;
 `;
 
 const InputContainer = styled.View`
   background-color: ${colors.textLighter};
-  border-radius: ${borderRadii.lg};
+  border-radius: ${borderRadii.lg}px;
   flex-direction: row;
-  height: ${spacing[12]};
-  padding: 0 ${spacing[5]};
-  column-gap: ${spacing[3]};
+  height: ${spacing[12]}px;
+  padding: 0 ${spacing[5]}px;
+  column-gap: ${spacing[3]}px;
 `;
 
 const AdornmentContainer = styled.View`
