@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ViewProps } from 'react-native';
-import { Typography } from '../typography';
+// import { Typography } from '../typography';
 import styled from '@emotion/native';
 import { spacing } from '../../theme/spacing';
 import { colors } from '../../theme/colors';
@@ -9,11 +9,11 @@ export type DividerProps = ViewProps & {
   children?: string;
 };
 
-export const Divider: FC<DividerProps> = ({ children }) => {
+export const Divider: FC<DividerProps> = () => {
   return (
     <Container>
       <Line />
-      {children && <Text variant="body2">{children}</Text>}
+      {/* {children && <Text variant="body2">{children}</Text>} */}
       <Line />
     </Container>
   );
@@ -31,7 +31,7 @@ const Line = styled.View`
   background-color: ${colors.textLight};
 `;
 
-const Text = styled(Typography)`
-  margin: 0 ${spacing[3]};
-  color: ${colors.textLight};
-`;
+// const Text = styled(Typography)`
+//   margin: 0 ${spacing[3]};
+//   color: ${colors.textLight};
+// `;
