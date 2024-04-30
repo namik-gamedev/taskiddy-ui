@@ -5,7 +5,12 @@ import { Typography } from '../typography';
 import { DividerProps } from './types';
 import { StyleProp, ViewStyle } from 'react-native';
 
-export const Divider: FC<DividerProps> = ({ children, paddings }) => {
+export const Divider: FC<DividerProps> = ({
+  children,
+  paddings,
+  style,
+  ...props
+}) => {
   const getStyle = (): StyleProp<ViewStyle> => {
     if (Array.isArray(paddings)) {
       return {
@@ -13,11 +18,11 @@ export const Divider: FC<DividerProps> = ({ children, paddings }) => {
         paddingBottom: paddings[1] || paddings[0],
       };
     }
-    return { paddingVertical: paddings };
+    return { paddingTop: paddings, paddingBottom: paddings };
   };
 
   return (
-    <Container style={getStyle()}>
+    <Container style={[getStyle(), style]} {...props}>
       <Line />
       {children && <Text variant="body2">{children}</Text>}
       <Line />
@@ -28,7 +33,6 @@ export const Divider: FC<DividerProps> = ({ children, paddings }) => {
 const Container = styled.View`
   flex-direction: row;
   align-items: center;
-  padding: 4px 0;
 `;
 
 const Line = styled.View`
