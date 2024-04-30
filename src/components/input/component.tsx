@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
 import { InputProps } from './types';
 import { InputHelperText } from './helper-text';
-import { InputLabel } from './label';
+import { Typography } from '../typography';
 
 export const Input: FC<InputProps> = ({
   label,
@@ -15,11 +15,7 @@ export const Input: FC<InputProps> = ({
 }) => {
   return (
     <Container>
-      {label && (
-        <InputLabel variant="link" isError={isError}>
-          {label}
-        </InputLabel>
-      )}
+      {label && <Label variant="link">{label}</Label>}
       <InputContainer>
         {LeftAdornment && (
           <AdornmentContainer>
@@ -62,8 +58,12 @@ const AdornmentContainer = styled.View`
 
 const StyledInput = styled.TextInput<InputProps>`
   flex: 1;
-  font-family: Poppins;
+  font-family: Montserrat;
   font-weight: 500;
 
   ${({ isError }) => ({ color: isError ? colors.danger : 'black' })}
+`;
+
+const Label = styled(Typography)`
+  margin-left: 10px;
 `;

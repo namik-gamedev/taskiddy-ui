@@ -8,5 +8,6 @@ export const InputHelperText = styled(Typography)<InputHelperTextProps>`
 
   ${({ isError = false }) => ({
     color: isError ? colors.danger : colors.textLight,
+    fontWeight: isError ? 600 : 500,
   })}
 `;
