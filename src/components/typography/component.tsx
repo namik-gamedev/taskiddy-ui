@@ -1,4 +1,4 @@
-import styled from '@emotion/native';
+import styled from 'styled-components/native';
 import { textVariants } from '../../theme/text-variants';
 import { TypographyProps } from './types';
 

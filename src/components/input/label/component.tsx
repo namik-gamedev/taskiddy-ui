@@ -1,4 +1,4 @@
-import styled from '@emotion/native';
+import styled from 'styled-components/native';
 import { colors } from '../../../theme/colors';
 import { Typography } from '../../typography';
 import { InputLabelProps } from './types';

@@ -1,6 +1,6 @@
 import { colors } from '../../../theme/colors';
 import { Typography } from '../../typography';
-import styled from '@emotion/native';
+import styled from 'styled-components/native';
 import { InputHelperTextProps } from './types';
 
 export const InputHelperText = styled(Typography)<InputHelperTextProps>`

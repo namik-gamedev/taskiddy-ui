@@ -1,12 +1,23 @@
-import styled from '@emotion/native';
+import styled from 'styled-components/native';
 import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
 import { Typography } from '../typography';
 import { DividerProps } from './types';
+import { StyleProp, ViewStyle } from 'react-native';
 
-export const Divider: FC<DividerProps> = ({ children }) => {
+export const Divider: FC<DividerProps> = ({ children, paddings }) => {
+  const getStyle = (): StyleProp<ViewStyle> => {
+    if (Array.isArray(paddings)) {
+      return {
+        paddingTop: paddings[0],
+        paddingBottom: paddings[1] || paddings[0],
+      };
+    }
+    return { paddingVertical: paddings };
+  };
+
   return (
-    <Container>
+    <Container style={getStyle()}>
       <Line />
       {children && <Text variant="body2">{children}</Text>}
       <Line />

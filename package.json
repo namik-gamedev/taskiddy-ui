@@ -1,6 +1,6 @@
 {
   "name": "taskiddy-ui",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "taskiddy",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -65,7 +65,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "jest": "^29.7.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-native": "0.73.6",
     "react-native-builder-bob": "^0.23.2",
@@ -157,7 +157,7 @@
     ]
   },
   "dependencies": {
-    "@emotion/native": "^11.11.0",
-    "@fortawesome/react-native-fontawesome": "^0.3.0"
+    "@fortawesome/react-native-fontawesome": "^0.3.0",
+    "styled-components": "^6.1.8"
   }
 }

@@ -1,4 +1,4 @@
-import styled from '@emotion/native';
+import styled from 'styled-components/native';
 import React, { FC } from 'react';
 import { colors } from '../../theme/colors';
 import { InputProps } from './types';
