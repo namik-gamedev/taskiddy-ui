@@ -22,7 +22,7 @@ const Container = styled.View`
 `;
 
 const Line = styled.View`
-  height: 0.5;
+  height: 0.5px;
   flex: 1;
   background-color: ${colors.textLight};
 `;
