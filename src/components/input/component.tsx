@@ -22,7 +22,10 @@ export const Input: FC<InputProps> = ({
             <LeftAdornment isError={isError} />
           </AdornmentContainer>
         )}
-        <StyledInput placeholderTextColor={colors.textLight} {...props} />
+        <StyledInput
+          placeholderTextColor={isError ? colors.danger : colors.textLight}
+          {...props}
+        />
         {RightAdornment && (
           <AdornmentContainer>
             <RightAdornment isError={isError} />
