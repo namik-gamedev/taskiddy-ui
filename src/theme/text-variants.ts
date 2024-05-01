@@ -15,6 +15,10 @@ export const textVariants = {
     fontSize: 14,
     fontWeight: '400',
   },
+  caption: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
   link: {
     fontSize: 16,
     fontWeight: '500',

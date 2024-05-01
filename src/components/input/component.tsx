@@ -4,6 +4,8 @@ import { colors } from '../../theme/colors';
 import { InputProps } from './types';
 import { InputHelperText } from './helper-text';
 import { Typography } from '../typography';
+import { textVariants } from '../../theme';
+import { InputContainer } from './container';
 
 export const Input: FC<InputProps> = ({
   label,
@@ -16,7 +18,7 @@ export const Input: FC<InputProps> = ({
   return (
     <Container>
       {label && <Label variant="link">{label}</Label>}
-      <InputContainer>
+      <InputContainer isError={isError}>
         {LeftAdornment && (
           <AdornmentContainer>
             <LeftAdornment isError={isError} />
@@ -45,15 +47,6 @@ const Container = styled.View`
   row-gap: 4px;
 `;
 
-const InputContainer = styled.View`
-  background-color: ${colors.textLighter};
-  border-radius: 20px;
-  flex-direction: row;
-  height: 48px;
-  padding: 0 20px;
-  column-gap: 12px;
-`;
-
 const AdornmentContainer = styled.View`
   height: 100%;
   justify-content: center;
@@ -63,10 +56,10 @@ const StyledInput = styled.TextInput<InputProps>`
   flex: 1;
   font-family: Montserrat;
   font-weight: 500;
-
-  ${({ isError }) => ({ color: isError ? colors.danger : 'black' })}
 `;
 
 const Label = styled(Typography)`
-  margin-left: 10px;
+  margin-left: 15px;
+
+  font-size: ${textVariants.body2.fontSize}px;
 `;
