@@ -4,7 +4,7 @@ export const textVariants = {
     fontWeight: '700',
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '500',
   },
   body: {

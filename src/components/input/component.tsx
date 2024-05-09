@@ -59,7 +59,7 @@ const StyledInput = styled.TextInput<InputProps>`
 `;
 
 const Label = styled(Typography)`
-  margin-left: 15px;
+  margin-left: 10px;
 
   font-size: ${textVariants.body2.fontSize}px;
 `;
