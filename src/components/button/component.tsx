@@ -9,10 +9,15 @@ export const Button: FC<ButtonProps> = ({
   loading = false,
   disabled = false,
   title = '',
+  fullWidth = false,
   ...props
 }) => {
   return (
-    <StyledButton disabled={disabled || loading} {...props}>
+    <StyledButton
+      fullWidth={fullWidth}
+      disabled={disabled || loading}
+      {...props}
+    >
       {loading ? (
         <ActivityIndicator color={colors.primary} />
       ) : (
@@ -23,8 +28,10 @@ export const Button: FC<ButtonProps> = ({
 };
 
 const StyledButton = styled.Pressable<ButtonProps>`
-  background: ${({ disabled }) =>
-    disabled ? colors.textLighter : colors.primary};
+  ${({ disabled, fullWidth }) => ({
+    color: disabled ? colors.textLighter : colors.primary,
+    width: fullWidth ? '100%' : 'auto',
+  })};
   flex-direction: row;
   justify-content: center;
   border-radius: 12px;
