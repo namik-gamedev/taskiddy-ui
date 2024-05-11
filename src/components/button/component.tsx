@@ -29,7 +29,7 @@ export const Button: FC<ButtonProps> = ({
 
 const StyledButton = styled.Pressable<ButtonProps>`
   ${({ disabled, fullWidth }) => ({
-    color: disabled ? colors.textLighter : colors.primary,
+    background: disabled ? colors.textLighter : colors.primary,
     width: fullWidth ? '100%' : 'auto',
   })};
   flex-direction: row;
