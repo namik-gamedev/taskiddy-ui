@@ -17,7 +17,7 @@ export const Input: FC<InputProps> = ({
 }) => {
   return (
     <Container>
-      {label && <Label variant="link">{label}</Label>}
+      {label && <Label>{label}</Label>}
       <InputContainer isError={isError}>
         {LeftAdornment && (
           <AdornmentContainer>
