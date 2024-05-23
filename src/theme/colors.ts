@@ -5,6 +5,7 @@ export const colors = {
   success: '#1ac653',
   warning: '#f9ab0e',
   danger: '#FF6347',
+  blue: '#1a8dc6',
 
   textLight: '#868686',
   textLighter: '#e1e1e1',
