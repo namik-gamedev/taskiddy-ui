@@ -4,3 +4,4 @@ export * from './icon';
 export * from './paddings';
 export * from './typography';
 export * from './button';
+export * from './form';

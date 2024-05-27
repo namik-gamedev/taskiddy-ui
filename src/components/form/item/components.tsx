@@ -9,10 +9,14 @@ export const FormItem = ({
   label,
   helperText,
   isError,
+  disabled,
 }: FormItemProps) => {
   const clonedChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
-      return cloneElement<{ isError?: boolean }>(child, { isError });
+      return cloneElement<{ isError?: boolean; disabled?: boolean }>(child, {
+        isError,
+        disabled,
+      });
     }
     return child;
   });

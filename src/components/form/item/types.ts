@@ -5,5 +5,6 @@ export type FormItemProps = ViewProps & {
   label?: string;
   helperText?: string;
   isError?: boolean;
-  children: ReactElement<unknown & { isError?: boolean }>;
+  disabled?: boolean;
+  children: ReactElement<unknown & { isError?: boolean; disabled?: boolean }>;
 };
