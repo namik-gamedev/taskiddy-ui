@@ -1,5 +1,5 @@
 import { TypographyProps } from '../../typography';
 
-export type InputHelperTextProps = TypographyProps & {
+export type FormHelperTextProps = TypographyProps & {
   isError?: boolean;
 };

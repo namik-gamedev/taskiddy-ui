@@ -1,23 +1,17 @@
-import styled from 'styled-components/native';
 import React, { FC } from 'react';
+import styled from 'styled-components/native';
 import { colors } from '../../theme/colors';
-import { InputProps } from './types';
-import { InputHelperText } from './helper-text';
-import { Typography } from '../typography';
-import { textVariants } from '../../theme';
 import { InputContainer } from './container';
+import { InputProps } from './types';
 
 export const Input: FC<InputProps> = ({
-  label,
   LeftAdornment,
   RightAdornment,
-  helperText,
   isError = false,
   ...props
 }) => {
   return (
     <Container>
-      {label && <Label>{label}</Label>}
       <InputContainer isError={isError}>
         {LeftAdornment && (
           <AdornmentContainer>
@@ -34,11 +28,6 @@ export const Input: FC<InputProps> = ({
           </AdornmentContainer>
         )}
       </InputContainer>
-      {helperText && (
-        <InputHelperText variant="body2" isError={isError}>
-          {helperText}
-        </InputHelperText>
-      )}
     </Container>
   );
 };
@@ -56,10 +45,4 @@ const StyledInput = styled.TextInput<InputProps>`
   flex: 1;
   font-family: Montserrat;
   font-weight: 500;
-`;
-
-const Label = styled(Typography)`
-  margin-left: 10px;
-
-  font-size: ${textVariants.body2.fontSize}px;
 `;
