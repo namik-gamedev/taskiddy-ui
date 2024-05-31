@@ -3,7 +3,7 @@ import { Typography } from '../../typography';
 import { textVariants } from '../../../theme';
 
 export const FormLabel = styled(Typography)`
-  margin-left: 10px;
-
+  margin-bottom: 4px;
+  font-weight: 600;
   font-size: ${textVariants.body2.fontSize}px;
 `;

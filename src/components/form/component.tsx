@@ -2,7 +2,7 @@ import React from 'react';
 import { ViewProps } from 'react-native';
 import styled from 'styled-components/native';
 import { FormHelperText } from './helper-text/component';
-import { FormItem } from './item/components';
+import { FormItem } from './item/component';
 import { FormLabel } from './label/component';
 
 export const Form = ({ ...props }: ViewProps) => {
@@ -10,7 +10,7 @@ export const Form = ({ ...props }: ViewProps) => {
 };
 
 const StyledForm = styled.View`
-  row-gap: 8px;
+  row-gap: 12px;
 `;
 
 Form.helperText = FormHelperText;
