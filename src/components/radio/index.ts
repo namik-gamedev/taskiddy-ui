@@ -1,3 +1,3 @@
 export * from './button';
 export * from './group';
-export * from './components';
+export * from './component';
