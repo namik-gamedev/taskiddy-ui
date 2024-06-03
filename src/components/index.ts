@@ -5,3 +5,4 @@ export * from './paddings';
 export * from './typography';
 export * from './button';
 export * from './form';
+export * from './radio';
