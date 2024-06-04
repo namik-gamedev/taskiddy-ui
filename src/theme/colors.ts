@@ -9,4 +9,7 @@ export const colors = {
 
   textLight: '#868686',
   textLighter: '#e1e1e1',
+
+  blueMale: '#2EABEA',
+  pnikFemale: '#F77FA1',
 } as const;
