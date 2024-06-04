@@ -2,9 +2,8 @@ import React from 'react';
 import { PressableProps } from 'react-native';
 import styled from 'styled-components/native';
 import { colors } from '../../../theme';
-import { RadioButtonProps } from './types';
 import { Typography } from '../../typography';
-import { RadioGroup } from '../group';
+import { RadioButtonProps } from './types';
 
 export const RadioButton = ({
   active,
@@ -14,10 +13,6 @@ export const RadioButton = ({
 }: RadioButtonProps) => {
   return (
     <RadioButtonContainer disabled={disabled} {...props}>
-      <RadioGroup value={''} onChange={() => {}}>
-        <Typography />
-        <Typography />
-      </RadioGroup>
       <RadioButtonOuter disabled={disabled}>
         {active && <RadioButtonInner />}
       </RadioButtonOuter>
