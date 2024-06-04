@@ -10,6 +10,7 @@ export const FormItem = ({
   helperText,
   isError,
   disabled,
+  required,
 }: FormItemProps) => {
   const clonedChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
@@ -23,7 +24,7 @@ export const FormItem = ({
 
   return (
     <StyledFormItem>
-      {label && <FormLabel>{label}</FormLabel>}
+      {label && <FormLabel>{required ? `${label} *` : label}</FormLabel>}
       {clonedChildren}
       {helperText && (
         <FormHelperText variant="body2" isError={isError}>
