@@ -11,5 +11,5 @@ export const colors = {
   textLighter: '#e1e1e1',
 
   blueMale: '#2EABEA',
-  pnikFemale: '#F77FA1',
+  pinkFemale: '#F77FA1',
 } as const;
