@@ -16,6 +16,7 @@ export const Button: FC<ButtonProps> = ({
     <StyledButton
       fullWidth={fullWidth}
       disabled={disabled || loading}
+      activeOpacity={0.5}
       {...props}
     >
       {loading ? (
@@ -27,7 +28,7 @@ export const Button: FC<ButtonProps> = ({
   );
 };
 
-const StyledButton = styled.Pressable<ButtonProps>`
+const StyledButton = styled.TouchableOpacity<ButtonProps>`
   ${({ disabled, fullWidth }) => ({
     background: disabled ? colors.textLighter : colors.primary,
     width: fullWidth ? '100%' : 'auto',
