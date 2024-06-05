@@ -10,6 +10,7 @@ export const Button: FC<ButtonProps> = ({
   disabled = false,
   title = '',
   fullWidth = false,
+  Icon,
   ...props
 }) => {
   return (
@@ -19,6 +20,7 @@ export const Button: FC<ButtonProps> = ({
       activeOpacity={0.5}
       {...props}
     >
+      {Icon}
       {loading ? (
         <ActivityIndicator color={colors.primary} />
       ) : (
@@ -34,6 +36,8 @@ const StyledButton = styled.TouchableOpacity<ButtonProps>`
     width: fullWidth ? '100%' : 'auto',
   })};
   flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
   justify-content: center;
   border-radius: 12px;
   padding: 16px 25px;
