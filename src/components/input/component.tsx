@@ -39,4 +39,5 @@ const StyledInput = styled.TextInput<InputProps>`
   flex: 1;
   font-family: Montserrat;
   font-weight: 500;
+  padding: 0px;
 `;
