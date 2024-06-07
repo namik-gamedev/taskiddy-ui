@@ -8,7 +8,7 @@ export const InputContainer = styled.View<InputContainerProps>`
     isError ? rgba(colors.danger, 0.1) : colors.textLighter};
   border-radius: 12px;
   flex-direction: row;
-  height: 48px;
-  padding: 0 20px;
+  align-items: center;
+  padding: 14px 20px;
   column-gap: 12px;
 `;
