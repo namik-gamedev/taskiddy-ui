@@ -17,7 +17,6 @@ export const Button: FC<ButtonProps> = ({
     <StyledButton
       fullWidth={fullWidth}
       disabled={disabled || loading}
-      activeOpacity={0.5}
       {...props}
     >
       {Icon}
